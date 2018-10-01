@@ -1,0 +1,845 @@
+/*
+Orange color: #e67e22
+*/
+
+
+/* ----------------------------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;                /* From the Queries.css */
+}
+
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------------------------- */
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+                /* White space for padding between all the sections */
+section {
+    padding: 80px 0;
+}
+
+
+.box {
+    padding: 1%;
+}
+
+
+
+/*-----HEADINGS-----*/
+
+h1, 
+h2, 
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    
+}
+
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+
+
+                /* Little yellow line between h2 and the text */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";              /* IMPORTANT Must specify content of an "after"  class*/
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+
+
+
+/*-----PARAGRAPHS-----*/
+
+.long-copy {
+    line-height: 145%;    /* Line-Height Should be between 120% and 145% */
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+
+
+
+/*-----ICONS-----*/
+
+.icon-big {
+    font-size: 350%;     /* Size of icon is a font, so increasing font-size increases size of the icon */
+    display: block;      /* Forces a line break*/
+    color: #e67e22;      /* Clolr of the icon */
+    margin-bottom: 10px; /* Margin between the icon and heading */
+    
+}
+
+
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+
+/*-----LINKS-----*/
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;                          /* No regular underline */
+    padding-bottom: 1px;                            /* Better underline */
+    border-bottom: 1px solid #e67e22;               /* Better underline */
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;     /* The hover effect transition takes 0.2 seconds */
+}
+
+
+a:hover, 
+a:active {
+    color: #555;                            /* Turns grey when hovered over*/
+    border-bottom: 1px solid transparent;   /* Underline turns transparent when hovered over */
+}
+
+
+/*-----BUTTONS-----*/
+
+.btn:link, 
+.btn:visited, 
+input[type=submit] {             /* These buttons are now also gonna be in the conact form */
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    cursor: pointer;            /* *** Turns default cursor into a pointer; do this with all type=submit buttonos *** */
+}
+
+.btn-full:link, 
+.btn-full:visited,  
+input[type=submit] {            /* These buttons are now also gonna be in the conact form */
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;           /* *** Turns default cursor into a pointer; do this with all type=submit buttonos *** */
+}
+
+.btn-ghost:link, 
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active, 
+ input[type=submit]:hover,     /* The contact "Send it" button now does hovering and active as well */
+ input[type=submit]:active {
+    background-color: #cf6d17;
+     cursor: pointer;          /* *** Turns default cursor into a pointer; do this with all type=submit buttonos *** */
+}
+
+.btn-full:hover, 
+.btn-full:active, 
+input[type=submit] {            /* These buttons are now also gonna be in the conact form */
+    border: 1px solid #cf6d17;
+    cursor: pointer;            /* *** Turns default cursor into a pointer; do this with all type=submit buttonos *** */
+}
+
+.btn-ghost:hover, 
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------------------------- */
+
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;    /* Really cool scrolling effect */
+}
+
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+
+
+
+.logo-black { display: none;        /* This image will not be displayed (from jQuery changes) */
+                                    /* It is incorporated, but not visible (in the normal state?) */
+             
+              height: 50px;         /* Decreasing the size of the logo-black image */
+              width: auto;
+              float: left;
+              margin: 5px 0;
+    
+}
+    
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none; /* Get Rid of Bullet Points */
+    margin-top: 55px;
+}
+
+
+                /* LI Navigation Buttons Configuration */
+.main-nav li {             
+    display: inline-block; /*Makes them go side by side */
+    margin-left: 40px;
+}
+
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;   /* Gets rid of text underline */
+    text-transform: uppercase;
+    font-size: 90%;   /* 18 Pixels */
+    border-bottom: 2px solid transparent; /* Border has to be there first, but transparent, so not seen until hovered over*/
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;       /* Border will show after 0.2 seconds of hovering over */ 
+}
+
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;  /* Border that will appear when hovered over */ 
+}
+
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;     /* Cursor pointer hand that usually appears when the a class has href */
+    display: none;       /* So that this doesn't display yet */
+}
+
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+
+/* Sticky navi */
+
+.sticky {
+    position: fixed;      /* Navigation stays at same point despite scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;                /* Box shadow = (x-axis, y-axis, vertifcal-blur, color) */ 
+    z-index: 9999;                                /* Makes the Sticky navi stay at the top of the screen */
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;                /* Increases the space of the button orange line from the bottom, making it lower */
+    color: #555;
+    }
+
+.sticky .logo { display: none; }        /* If the Logo is inside the Sticky navi, this one will be hidden */
+.sticky .logo-black { display: block; } /* If the logo-black is inside of the sticky navi, then it should be displayed as a block, but will                                                          no longer be hidden */
+                                        /* This is so that this black logo will only appear during the scroll animation (jQuery changes) */
+
+
+
+/* ----------------------------------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------------------------------- */
+
+
+.section-features .long-copy {
+    margin-bottom: 30px;        /* Adds some space */
+}
+
+
+
+
+/* THIRD PAGE GRID SECTION */
+
+/* ----------------------------------------------------------------- */
+/* MEALS */
+/* ----------------------------------------------------------------- */
+
+
+.section-meals {
+    padding: 0;      /* Takes of extra empty space between the sections */
+}
+
+
+
+.meals-showcase {
+    list-style: none;      /* no bullet points in the list */
+    width: 100%;           /* Entire browser width */
+}
+
+
+.meals-showcase li {
+    display: block;
+    float: left;       /* Showing the pictures side-by-side */
+    width: 25%;        /* Width of all the pictures combined is 100% width, so each of 4 pictures is 25% */
+}
+
+
+.meal-photo {
+    width: 100%;            /* This has the exxact width of its parrent i.e. .mmeals-showcase li (width 25%) */
+    margin: 0;
+    overflow: hidden;       /* If the picture's size overflows its container, that is hidden */
+    background-color: #000; /* Background color behind image is black, turning the image darker */
+}
+
+
+.meal-photo img {
+    opacity: 0.7;    /* Makes the photos lighter */
+    width: 100%;     /* Photo is as wide as its container i.e. .meal-photo, i.e. .meals-showcase li (25%) */
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);  /* Zooms in on the photos, in order to use the effect of zooming out on them when hovered over */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /* The slow transition zooming out effect, and the slow opacity color change to lighter */
+}
+
+
+.meal-photo img:hover {    /* These effects happen when the picture is hovered over */
+    opacity: 1;             /* When image is hovered over, pacity changes to lighter color */
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);   /* The pictures will return to its regular size when hovered over */
+}
+
+
+
+
+/* FOURTH PAGE OF WEBSITE */
+
+
+/* ----------------------------------------------------------------- */
+/* HOW IT WORKS */
+/* ----------------------------------------------------------------- */
+
+
+
+.section-steps {           /* Subtle background color */
+    background-color: #f4f4f4;
+}
+
+
+.steps-box:first-child {   /* This will select the first of the setp-boxes */
+    text-align: right;     /* This will move image to the right side; the text-align also effects image in the box */
+    padding-right: 3%;     /* The padding being percentage is for the website page fluidity */
+    margin-top: 30px;      /* First box will have 30px on top */
+}
+    
+
+.steps-box:last-child {    /* This will select the last of the setp-boxes */
+    padding-left: 3%;
+    margin-top: 70px;      /* Second box will have 70px on top */
+}
+
+
+
+.app-screen {
+    width: 40%;            /* This makes the iPhone image now 40% inside the block, making the image much smaller */
+}
+    
+    
+
+.works-step {              /* The class for the numbers and descriptions in this section */
+    margin-bottom: 50px;   /* Space in between the numbers and descriptions in this section */
+}    
+
+
+
+.works-step:last-of-type {  /* Only the last number will be affected. Only Number 3 is affected by this */
+    margin-bottom: 80px;    /* Only the last number will have a margin bottom of 80px; the rest will stay the same */
+}
+
+
+
+.works-step div {         /* Just the Numbers in class works-steps */
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;   /* To prevent the elements from forcing a line break, to put numbers next to the text */
+   
+    /* These are to make the rectangles around the numbers into circles*/
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    /* End of rectangle to circle code */
+    
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;   /* Moves circled numbers to the left */
+}
+
+
+
+.btn-app:link,       /* Solves problem of weird border appearing inder these images */
+.btn-app:visited {
+    border: 0;
+}
+
+
+
+.btn-app img {
+    height: 50px;     /* Makes both button app images the same size */
+    width: auto;
+    margin-right: 10px;  /* Puts Space in between the two images */
+    
+}
+
+
+
+
+/* FIFTH PAGE OF WEBSITE */
+
+
+
+/* ----------------------------------------------------------------- */
+/* CITIES */
+/* ----------------------------------------------------------------- */
+
+
+/*WOW THAT WAS COOL!!!*/
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+/* SIXTH PAGE OF WEBSITE */
+
+
+
+/* ----------------------------------------------------------------- */
+/* TESTIMONIALS */
+/* ----------------------------------------------------------------- */
+
+
+.section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
+    background-size: cover;        /* Make the image fit the whole length of the browser */
+    color: #fff;                   /* Makes color of the text white */
+    background-attachment: fixed;  /* The image now scrolls up and down, while text stays in same place */
+}
+
+
+blockquote {
+    padding: 2%;
+    font-style: italic;     /* Customer testomonials are usually in italics */
+    line-height: 145%;
+    position: relative;     /* See below: "If you put the position as absolute, then you must make sure its */
+                            /* parent element has a position that is relative" */
+    margin-top: 40px;
+}
+
+
+blockquote:before {
+    content: "\201C";       /* This is how you can add text to the web page using only CSS */
+                            /* Also, that "\201C" code is a fancy quote picture/icon */
+    
+    font-size: 500%;
+    display: block;         /* Putting the quotion mark in its own block element */
+    
+    position: absolute;     /* If you put the position as absolute, then you must make sure its parent element has */                         /* a position that is relative */
+    top: -5px;
+    left: -5px;
+}
+
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;      /* Makes the cite information its own seperate block */
+}
+
+
+cite img {
+    height: 45px;           /* These two effects make the images small and round */
+    border-radius: 50%;     /* These two effects make the images small and round */
+    margin-right: 10px;
+    vertical-align: middle; /* Puts person's name in the middle */
+}
+
+
+
+
+/* SEVENTH PAGE OF WEBSITE */
+
+
+
+/* ----------------------------------------------------------------- */
+/* SIGN UP */
+/* ----------------------------------------------------------------- */
+
+
+
+.section-plans {
+    background-color: #f4f4f4;        /* That little grey background */
+}
+
+
+.plan-box {                           /* Formatting the Plan Box */
+    background-color: #fff;           /* Makes this Plan Box white, so it looks different from the rest of the section */
+    border-radius: 5px;               /* Rounds the corners of the border */
+    width: 90%;                       /* Makes the white space from smaller: 90 percent of it */
+    margin-left: 5%;                  /* Moves all the white boxes to the right *
+                                      /* Width = 90%. 100% - 90%= 10%. 5% is half of tat remaining 10% */
+    
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    
+    box-shadow: 0 2px 2px #efefef;    /* (X axis, Y Axis, Blur, Color) */
+}
+
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+
+.plan-box div:last-child {     /* Targets only the last child in plan-box div */
+    text-align: center;        /* Aligns the text button to the center */
+    border: 0;
+}
+
+
+
+.plan-price {
+    font-size: 300%;        /* Decrease font-weight if you increase font-size */
+    margin-bottom: 10px;
+    font-weight: 100;       /* Decrease font-weight if you increase font-size */
+    color: #e67e22;         /* Make this Orange to make this element stand out more */
+}
+
+
+.plan-price span {
+    font-size: 30%;         /* 30% of the 300% */
+    font-weight: 300;       /* In herits the font-weight of its parent (.plan-price) */
+}
+
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+
+.plan-box ul {
+    list-style: none;      /* Gets rid of the dots */
+}
+
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+
+
+
+
+/* EIGHTH PAGE OF WEBSITE */
+
+
+/* ----------------------------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------------------------- */
+
+
+
+.contact-form {    
+    width:60;
+    margin: 0 auto;
+}
+
+
+input[type=text],       /* All input elements that have the type "text"  */
+input[type=email],      /* All input elements that have the type "email" */
+select, 
+textarea {
+    width: 100%;        /* So they fill there whole column */
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;    /* Gets rid of weird border */
+}
+
+
+textarea {
+    height: 100px;
+    
+}
+
+
+
+.input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+
+
+*:focus {outline: none;}
+
+
+
+
+
+/* NINTH PAGE OF WEBSITE */
+
+
+/* ----------------------------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------------------------- */
+
+
+
+footer {
+    background-color: #333;       /* Making the background color darker */
+    padding: 50px;                /* *** Gives that big space between the lie and the footer nav words *** */
+    font-size: 80%;
+}
+
+
+.footer-nav {
+    list-style: none;       /* Have no bullet points */
+    float: left;            /* Float on the left side, inside of its container */
+}
+
+
+.social-links {
+    list-style: none;       /* No bullet points */
+    float: right;           /* Float all the way to the right side */
+}
+
+
+.footer-nav li,             /* All this makes the social links and the footer navs side by side */
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+.footer-nav li:last-child, 
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+
+.footer-nav li a:link, 
+.footer-nav li a:visited, 
+.social-links li a:link, 
+.social-links li a:visited {
+    text-decoration: none;      /* No underlining */
+    border: 0;                  /* No border */
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+} 
+
+
+.footer-nav li a:hover, 
+.footer-nav li a:active {
+    color: #ddd;
+    
+}
+
+
+
+.social-links li a:link,            /* Social Media Icons */
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+
+.ion-social-facebook,         /* Hover Delay */
+.ion-social-twitter, 
+.ion-social-googleplus, 
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+.ion-social-facebook:hover {
+    color: #3b5998;              /* Color of Facebook */
+}
+
+
+.ion-social-twitter:hover {
+    color: #00aced;              /* Color of Facebook */
+}
+
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;              /* Color of Facebook */
+}
+
+
+.ion-social-instagram:hover {
+    color: #517fa4;              /* Color of Facebook */
+}
+
+
+
+
+footer p {                  /* Formatting for the Copyright Message */
+    color: #888;            /* Copyright Message same color as the links */
+    text-align: center;     /* *** Centers the opyright message *** */
+    margin-top: 20px;       /* *** Puts space in between the footer-nav words and the Copyright Message *** */
+}
+
+
+/* ----------------------------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------------------------- */
+
+.js--wp-1, 
+.js--wp-2, 
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;           /* Speeds up the animation */
+}
+
+.js--wp-4 {                           /* Speeds up the animation */
+    animation-duration: 1s;
+}
+
+
+.js--wp-1.animated,  
+.js--wp-2.animated,  
+.js--wp-3.animated {
+    opacity: 1;
+}
