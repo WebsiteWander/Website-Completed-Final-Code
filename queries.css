@@ -1,0 +1,144 @@
+/* Big tablet to 1200px (widths smaller than the 1140 px row) */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        position: absolute;
+        width: 100%;
+        padding: 0 2%;
+}
+
+    
+    .row { padding: 0 2%; }
+
+    
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023 px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px; }
+    section {padding: 60px 0; }
+    
+    
+    .long-copy {
+         width: 80%;
+        margin-left: 10%;
+    }
+
+    .steps-box { margin-top: 10px; }
+    .steps-box:last-child { margin-top: 10px; }
+    .works-steps { margin-bottom: 40px; }
+    .works-step:last-of-type { margin-bottom: 60px; }
+    
+    .app-screen { width: 50%; }
+    
+    .icon-small { 
+        width: 17px; 
+        margin-right: 5px; 
+    }
+    
+    .city-feature {font-size: 90%; }
+    
+    .plan-box {
+        width: 100%; 
+        margin-left: 0%; 
+    }
+    
+    .plan-price { font-size: 250%; }
+    
+    .contact-form { width: 80%; }
+    
+}
+
+
+
+
+
+
+/* Small phones to small tablets: from 481 to 767 */
+@media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    
+    .row, 
+    .hero-text-box { padding: 0 4%; }
+    
+    .col {                        /* This comes from grid.css. Modifying code from that file */
+	width: 100%; 
+	margin: 0 0 4% 0;
+}
+    
+    
+    .main-nav {display: none; }              /* Hides the Navigation */
+    
+    .mobile-nav-icon {display: inline-block; }    /* When the screen is this small, the small iPhone navigation appears */
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px;
+    }
+    
+    .main-nav li {
+        display: block;         /* When the size is this small, make all the links stacked up atop one another */
+    }
+    
+    .main-nav li a:link, 
+    .main-nav li a:visited {
+        display: block;
+        border: 0;          /* No border needed, since you cannot hover on a mobile phone, with this small of screen size */
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    
+    
+    .sticky .main-nav { margin-top: 10px; }
+    
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+                        /* Increases the space of the button orange line from the bottom, making it lower */
+    
+    .sticky .mobile-nav-icon { margin-top: 10px; }  /* Makes the sticky navigation mobile button higher on the screen */
+    .sticky .mobile-nav-icon i { color: #555; }   /* Makes the sticky navigation mobile button black, so it can be seen */  
+
+    
+    
+    h1 { font-size: 180%; }
+    h1 { font-size: 150%; }
+    
+    
+    .long-copy {
+        width: 100%; 
+        margin-left: 0%; 
+    }
+    
+    
+    .app-screen { width: 40%; }
+    .steps-box:first-child {text-align: center; }    /* Puts the image in the center */
+    
+    
+    .works-step div {         /* Just the Numbers in class works-steps */
+        
+        /* These are to make the rectangles around the numbers into circles*/
+        height: 40px;
+        width: 40px;
+        /* End of rectangle to circle code */
+        
+        padding: 4px;
+        margin-right: 15px;   /* Moves circled numbers to the left */
+        font-size: 120%; 
+    }
+
+    
+    .works-step { margin-bottom: 20px; }               /* Decreasing the White Space */
+    .works-step:last-of-type { margin-bottom: 20px; }   /* Decreasing the White Space */
+    
+}
+
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    .contact-form { width: 100%; }
+}
+
